@@ -3,8 +3,6 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-import javax.swing.event.ChangeListener;
-import java.beans.PropertyChangeListener;
 
 /**
  * A simple example for Javafx beans
@@ -31,8 +29,8 @@ public class Monitor {
     }
 
     public void setSize(int newSize){
-        if (size != null || size.get() != newSize){
-            size.set(newSize);
+        if (size != null && sizeProperty().get() != newSize){
+            sizeProperty().set(newSize);
         }
     }
 

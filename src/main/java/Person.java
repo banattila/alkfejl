@@ -44,4 +44,8 @@ public class Person {
     public void removePropertyChangeListener(PropertyChangeListener pcl){
         pcs.removePropertyChangeListener(pcl);
     }
+
+    public String toString(){
+        return "Person name is: " + getName() + " and " + getAge() + " years old";
+    }
 }
