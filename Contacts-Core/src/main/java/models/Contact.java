@@ -20,7 +20,7 @@ public class Contact {
     private StringProperty email = new SimpleStringProperty(this, "email");
     private ObjectProperty<ObservableList<Phone>> phones = new SimpleObjectProperty<>(this, "phones");
     private StringProperty address = new SimpleStringProperty(this, "address");
-    private ObjectProperty<LocalDate> birthday = new SimpleObjectProperty<>(this, "birthday");
+    private ObjectProperty<LocalDate> dateOfBirth = new SimpleObjectProperty<>(this, "birthday");
     private StringProperty company = new SimpleStringProperty(this, "company");
     private StringProperty position = new SimpleStringProperty(this, "position");
 
@@ -84,16 +84,16 @@ public class Contact {
         this.address.set(address);
     }
 
-    public LocalDate getBirthday() {
-        return birthday.get();
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth.get();
     }
 
-    public ObjectProperty<LocalDate> birthdayProperty() {
-        return birthday;
+    public ObjectProperty<LocalDate> dateOfBirthProperty() {
+        return dateOfBirth;
     }
 
-    public void setBirthday(LocalDate birthday) {
-        this.birthday.set(birthday);
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth.set(dateOfBirth);
     }
 
     public String getCompany() {

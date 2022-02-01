@@ -32,6 +32,19 @@ public class Phone {
     private IntegerProperty id = new SimpleIntegerProperty(this, "id");
     private StringProperty number = new SimpleStringProperty(this, "number");
     private ObjectProperty<PhoneType> phoneType = new SimpleObjectProperty<>(this, "phoneType");
+    private IntegerProperty contactId = new SimpleIntegerProperty(this, "contactId");
+
+    public int getContactId() {
+        return contactId.get();
+    }
+
+    public IntegerProperty contactIdProperty() {
+        return contactId;
+    }
+
+    public void setContactId(int contactId) {
+        this.contactId.set(contactId);
+    }
 
     public int getId() {
         return id.get();
